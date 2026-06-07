@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Buddy Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏋️ Fitness Buddy</h1>
+    <h3 style="text-align:center;">Your Personal AI Fitness Coach</h3>
+
+    <form method="POST">
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter Email"
+            required>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required>
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+    <br>
+
+    <p style="text-align:center;">
+        New User?
+        <a href="/register">Register Here</a>
+    </p>
+
+</div>
+
+<div class="floating-icon">
+🏃
+</div>
+
+</body>
+</html>

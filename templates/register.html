@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Buddy Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Create Account</h1>
+
+<form method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+required>
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+required>
+
+<input
+type="number"
+name="age"
+placeholder="Age"
+required>
+
+<input
+type="number"
+name="height"
+placeholder="Height (cm)"
+required>
+
+<input
+type="number"
+name="weight"
+placeholder="Weight (kg)"
+required>
+
+<select name="goal">
+
+<option>Weight Loss</option>
+<option>Muscle Gain</option>
+<option>General Fitness</option>
+
+</select>
+
+<button type="submit">
+Register
+</button>
+
+</form>
+
+<br>
+
+<p style="text-align:center;">
+Already Registered?
+<a href="/login">Login Here</a>
+</p>
+
+</div>
+
+<div class="floating-icon">
+💪
+</div>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+Flask==3.0.3
+Werkzeug==3.0.3
+ibm-watsonx-ai==1.1.11
+python-dotenv==1.0.1
+requests==2.32.3

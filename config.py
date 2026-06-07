@@ -1,0 +1,13 @@
+import os
+
+class Config:
+
+    SECRET_KEY = "fitnessbuddysecret"
+
+    IBM_API_KEY = "YOUR_IBM_API_KEY"
+
+    IBM_PROJECT_ID = "YOUR_PROJECT_ID"
+
+    IBM_URL = "https://us-south.ml.cloud.ibm.com"
+
+    DATABASE = "database.db"

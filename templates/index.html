@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Fitness Buddy Results</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',filename='style.css') }}">
+
+<script src="{{ url_for('static',filename='script.js') }}"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎯 Fitness Buddy Result</h1>
+
+{% if bmi %}
+
+<div class="progress-circle">
+
+{{ bmi }}
+
+</div>
+
+<h2 style="text-align:center;">
+Your BMI = {{ bmi }}
+</h2>
+
+{% endif %}
+
+{% if response %}
+
+<h2>AI Recommendation</h2>
+
+<pre id="responseText"></pre>
+
+<script>
+
+typeWriter(
+`{{ response }}`,
+"responseText"
+);
+
+</script>
+
+{% endif %}
+
+<br>
+
+<a href="/">
+
+<button>
+
+Back to Dashboard
+
+</button>
+
+</a>
+
+</div>
+
+</body>
+</html>

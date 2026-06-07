@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Fitness Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',filename='style.css') }}">
+
+<script src="{{ url_for('static',filename='script.js') }}"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<h1>
+🏋️ Welcome {{ user.name }}
+</h1>
+
+<div class="stats">
+
+<div class="stat-card">
+🔥 Goal
+<br>
+{{ user.goal }}
+</div>
+
+<div class="stat-card">
+📏 Height
+<br>
+{{ user.height }} cm
+</div>
+
+<div class="stat-card">
+⚖ Weight
+<br>
+{{ user.weight }} kg
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>BMI Calculator</h2>
+
+<form action="/bmi" method="POST">
+
+<input
+type="number"
+name="height"
+placeholder="Height (cm)"
+required>
+
+<input
+type="number"
+name="weight"
+placeholder="Weight (kg)"
+required>
+
+<button type="submit">
+Calculate BMI
+</button>
+
+</form>
+
+</div>
+
+<div class="card">
+
+<h2>Fitness Buddy AI</h2>
+
+<form action="/fitness_ai" method="POST">
+
+<select name="goal">
+
+<option>Weight Loss</option>
+<option>Muscle Gain</option>
+<option>General Fitness</option>
+
+</select>
+
+<button type="submit"
+onclick="showLoader()">
+
+Generate Plan
+
+</button>
+
+</form>
+
+<div id="loader" style="display:none;"></div>
+
+</div>
+
+<div class="card">
+
+<h2>Daily Motivation</h2>
+
+<p id="quote"></p>
+
+</div>
+
+<a href="/logout">
+<button>
+Logout
+</button>
+</a>
+
+</div>
+
+<div class="floating-icon">
+🏃
+</div>
+
+<script>
+
+const quotes = [
+
+"Every workout counts.",
+"Stay consistent.",
+"Progress over perfection.",
+"Small steps every day.",
+"Discipline beats motivation."
+
+];
+
+document.getElementById("quote").innerHTML =
+quotes[Math.floor(Math.random()*quotes.length)];
+
+</script>
+
+</body>
+</html>
